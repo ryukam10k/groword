@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Words</h1>
+    <div><a href="/word/add">Add</a></div>
     <table class="table">
         <tr>
             <th>Name</th>
