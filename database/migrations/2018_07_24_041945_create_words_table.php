@@ -16,9 +16,9 @@ class CreateWordsTable extends Migration
         Schema::create('words', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('howtoread');
-            $table->string('meaning');
-            $table->string('source');
+            $table->string('howtoread')->nullable();
+            $table->string('meaning')->nullable();
+            $table->string('source')->nullable();
             $table->timestamps();
         });
     }
