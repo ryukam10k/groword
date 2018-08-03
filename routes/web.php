@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('word', 'WordController@index');
 Route::get('word/add', 'WordController@add');
 Route::post('word/add', 'WordController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
