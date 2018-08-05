@@ -21,23 +21,23 @@
                         {{ csrf_field() }}
                         <tr>
                             <th>name: </th>
-                            <td><input type="text" name="name" value="{{old('name')}}"></td>
+                            <td><input type="text" class="form-control" name="name" value="{{old('name')}}"></td>
                         </tr>
                         <tr>
                             <th>howtoread: </th>
-                            <td><input type="text" name="howtoread" vaule="{{old('howtoread')}}"></td>
+                            <td><input type="text" class="form-control" name="howtoread" value="{{old('howtoread')}}"></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
-                            <td><input type="text" name="meaning" value="{{old('meaning')}}"></td>
+                            <td><textarea class="form-control" rows="7" name="meaning">{{old('meaning')}}</textarea></td>
                         </tr>
                         <tr>
                             <th>source: </th>
-                            <td><input type="text" name="source" value="{{old('source')}}"></td>
+                            <td><input type="text" class="form-control" name="source" value="{{old('source')}}"></td>
                         </tr>
                         <tr>
                             <th></th>
-                            <td><input type="submit" value="send"></td>
+                            <td><input type="submit" class="btn btn-primary" value="send"></td>
                         </tr>
                     </table>
                     </form>

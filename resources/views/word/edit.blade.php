@@ -22,23 +22,23 @@
                     <table class="table">
                         <tr>
                             <th>name: </th>
-                            <td><input type="text" name="name" value="{{$form->name}}"></td>
+                            <td><input type="text" class="form-control" name="name" value="{{$form->name}}"></td>
                         </tr>
                         <tr>
                             <th>howtoread: </th>
-                            <td><input type="text" name="howtoread" value="{{$form->howtoread}}"></td>
+                            <td><input type="text" class="form-control" name="howtoread" value="{{$form->howtoread}}"></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
-                            <td><input type="text" name="meaning" value="{{$form->meaning}}"></td>
+                            <td><textarea class="form-control" rows="7" name="meaning">{{$form->meaning}}</textarea></td>
                         </tr>
                         <tr>
                             <th>source: </th>
-                            <td><input type="text" name="source" value="{{$form->source}}"></td>
+                            <td><input type="text" class="form-control" name="source" value="{{$form->source}}"></td>
                         </tr>
                         <tr>
                             <th></th>
-                            <td><input type="submit" value="send"></td>
+                            <td><input type="submit" class="btn btn-primary" value="send"></td>
                         </tr>
                     </table>
                     </form>

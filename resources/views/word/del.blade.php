@@ -31,7 +31,7 @@
                             </tr>
                             <tr>
                                 <th></th>
-                                <td><input type="submit" value="send"></td>
+                                <td><input type="submit" class="btn btn-danger" value="send"></td>
                             </tr>
                         </table>
                     </form>
