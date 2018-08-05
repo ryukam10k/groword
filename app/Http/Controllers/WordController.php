@@ -52,6 +52,7 @@ class WordController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request, Word::$rules);
         $word = Word::find($request->id);
         $form = $request->all();
         unset($form['_token']);
@@ -64,7 +65,7 @@ class WordController extends Controller
         $word = Word::find($request->id);
         return view('word.del', ['form' => $word]);
     }
-    
+
     public function remove(Request $request)
     {
         Word::find($request->id)->delete();
