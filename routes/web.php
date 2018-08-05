@@ -15,10 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Word */
 Route::get('word', 'WordController@index');
 Route::get('word/add', 'WordController@add');
 Route::post('word/add', 'WordController@create');
+Route::get('word/show', 'WordController@show');
+Route::get('word/edit', 'WordController@edit');
+Route::post('word/edit', 'WordController@update');
+Route::get('word/del', 'WordController@delete');
+Route::post('word/del', 'WordController@remove');
 
+/* Auth */
 Auth::routes();
 
+/* Home */
 Route::get('/home', 'HomeController@index')->name('home');
