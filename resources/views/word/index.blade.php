@@ -10,8 +10,8 @@
                     <div><a href="/word/add">Add</a></div>
                     <table class="table">
                         <tr>
-                            <th>Name</th>
-                            <th>Meaning</th>
+                            <th><a href="/word?sort=name">Name</a></th>
+                            <th><a href="/word?sort=meaning">Meaning</a></th>
                             <th></th>
                         </tr>
                         @foreach ($items as $item)
@@ -26,6 +26,7 @@
                         </tr>
                         @endforeach
                     </table>
+                    {{ $items->appends(['sort' => $sort])->links() }}
                 </div>
             </div>
         </div>

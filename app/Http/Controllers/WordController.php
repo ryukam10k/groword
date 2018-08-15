@@ -19,8 +19,13 @@ class WordController extends Controller
     
     public function index(Request $request)
     {
-        $items = Word::all();
-        return view('word.index', ['items' => $items]);
+        $sort = $request->sort;
+        if ($sort == null) {
+            $sort = 'name';
+        }
+        $items = Word::orderBy($sort, 'asc')->paginate(5);
+        $param = ['items' => $items, 'sort' => $sort];
+        return view('word.index', $param);
     }
 
     public function add(Request $request)
