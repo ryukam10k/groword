@@ -21,9 +21,13 @@ class WordController extends Controller
     {
         $sort = $request->sort;
         if ($sort == null) {
-            $sort = 'name';
+            $sort = 'updated_at';
         }
-        $items = Word::orderBy($sort, 'asc')->paginate(5);
+        $order = $request->order;
+        if ($order == null) {
+            $order = 'desc';
+        }
+        $items = Word::orderBy($sort, $order)->paginate(5);
         $param = ['items' => $items, 'sort' => $sort];
         return view('word.index', $param);
     }

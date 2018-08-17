@@ -10,14 +10,25 @@
                     <div><a href="/word/add">Add</a></div>
                     <table class="table">
                         <tr>
-                            <th><a href="/word?sort=name">Name</a></th>
-                            <th><a href="/word?sort=meaning">Meaning</a></th>
-                            <th></th>
+                            <th style="width:20%;">Name
+                                <a href="/word?sort=name&order=asc">△</a>
+                                <a href="/word?sort=name&order=desc">▽</a>
+                            </th>
+                            <th>Meaning
+                                <a href="/word?sort=meaning&order=asc">△</a>
+                                <a href="/word?sort=meaning&order=desc">▽</a>
+                            </th>
+                            <th style="width:15%;">UpdateAt
+                                <a href="/word?sort=updated_at&order=asc">△</a>
+                                <a href="/word?sort=updated_at&order=desc">▽</a>
+                            </th>
+                            <th style="width:20%;"></th>
                         </tr>
                         @foreach ($items as $item)
                         <tr>
                             <td>{{$item->name}}</td>
                             <td>{{$item->meaning}}</td>
+                            <td>{{$item->updated_at}}</td>
                             <td>
                                 <a href="/word/show?id={{$item->id}}">show</a> | 
                                 <a href="/word/edit?id={{$item->id}}">edit</a> | 
