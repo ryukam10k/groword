@@ -27,7 +27,7 @@ class WordController extends Controller
         if ($order == null) {
             $order = 'desc';
         }
-        $items = Word::orderBy($sort, $order)->paginate(5);
+        $items = Word::orderBy($sort, $order)->paginate(30);
         $param = ['items' => $items, 'sort' => $sort];
         return view('word.index', $param);
     }
