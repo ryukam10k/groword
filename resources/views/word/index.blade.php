@@ -7,7 +7,8 @@
             <div class="card">
                 <div class="card-header">Words</div>
                 <div class="card-body">
-                    <div><a href="/word/add">Add</a></div>
+                    <a href="/word/add" class="btn btn-primary btn-sm" role="button" style="float:right;">Add</a>
+                    {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
                     <table class="table">
                         <tr>
                             <th style="width:20%;">Name
@@ -37,7 +38,7 @@
                         </tr>
                         @endforeach
                     </table>
-                    {{ $items->appends(['sort' => $sort])->links() }}
+                    {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
                 </div>
             </div>
         </div>
