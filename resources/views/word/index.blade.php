@@ -7,7 +7,6 @@
             <div class="card">
                 <div class="card-header">Words</div>
                 <div class="card-body">
-                    <a href="/word/add" class="btn btn-primary btn-sm" role="button" style="float:right;">Add</a>
                     {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
                     <table class="table">
                         <tr>
