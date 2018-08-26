@@ -39,8 +39,8 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
                         <li class="nav-item" style="display:flex; alignItems:center; margin-left:15px;">
-                        <form class="form-inline md-form form-sm">
-                            <input class="form-control form-control-sm mr-3" type="text" placeholder="Search" aria-label="Search">
+                        <form action="/word" method="get" class="form-inline md-form form-sm">
+                            <input name="keyword" class="form-control form-control-sm mr-3" type="text" placeholder="Search" aria-label="Search">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </form>
                         </li>
@@ -55,7 +55,7 @@
                             </li>
                         @else
                             <li class="nav-item" style="display:flex; alignItems:center; margin-right:15px;">
-                                <a href="/word/add" class="btn btn-dark btn-sm" role="button"><i class="fa fa-pen"></i> Add</a>
+                                <a href="/word/add" class="btn btn-dark btn-sm" role="button"><i class="fas fa-pen"></i> Add</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
