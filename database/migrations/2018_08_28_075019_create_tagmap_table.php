@@ -28,6 +28,6 @@ class CreateTagmapTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tagmap');
+        Schema::dropIfExists('tagmaps');
     }
 }
