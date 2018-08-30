@@ -13,7 +13,7 @@ class CreateTagmapTable extends Migration
      */
     public function up()
     {
-        Schema::create('tagmap', function (Blueprint $table) {
+        Schema::create('tagmaps', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('word_id');
             $table->integer('tag_id');
