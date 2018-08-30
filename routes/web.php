@@ -23,6 +23,9 @@ Route::post('word/edit', 'WordController@update');
 Route::get('word/del', 'WordController@delete');
 Route::post('word/del', 'WordController@remove');
 
+/* Tag */
+Route::get('tag', 'TagController@index');
+
 /* Auth */
 Auth::routes();
 
