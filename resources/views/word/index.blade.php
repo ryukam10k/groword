@@ -18,6 +18,8 @@
                                 <a href="/word?sort=meaning&order=asc">△</a>
                                 <a href="/word?sort=meaning&order=desc">▽</a>
                             </th>
+                            <th style="width:15%;">Tag
+                            </th>
                             <th style="width:15%;">UpdateAt
                                 <a href="/word?sort=updated_at&order=asc">△</a>
                                 <a href="/word?sort=updated_at&order=desc">▽</a>
@@ -28,6 +30,7 @@
                         <tr>
                             <td>{{$item->name}}</td>
                             <td>{{$item->meaning}}</td>
+                            <td>{{$item->tags}}</td>
                             <td>{{$item->updated_at}}</td>
                             <td>
                                 <a href="/word/show?id={{$item->id}}">show</a> | 

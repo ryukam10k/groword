@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Word;
+use DB;
 
 class WordController extends Controller
 {
@@ -21,15 +22,26 @@ class WordController extends Controller
     {
         $sort = $request->sort;
         if ($sort == null) {
-            $sort = 'updated_at';
+            $sort = 'words.updated_at';
         }
         $order = $request->order;
         if ($order == null) {
             $order = 'desc';
         }
         $keyword = $request->keyword;
-        $items = Word::where('name', 'LIKE', "%$keyword%")->orderBy($sort, $order)->paginate(20);
+        $items = Word::where('words.name', 'LIKE', "%$keyword%")
+        ->leftJoin('tagmaps', 'words.id', '=', 'tagmaps.word_id')
+        ->leftJoin('tags', 'tagmaps.tag_id', '=', 'tags.id')
+        ->select(
+            'words.*',
+            DB::raw('GROUP_CONCAT(tags.name) AS tags')
+        )
+        ->groupBy('words.id')
+        ->orderBy($sort, $order)
+        ->paginate(20);
+        //dd($items->toSql());
         $param = ['items' => $items, 'sort' => $sort, 'order' => $order];
+        //dd($param);
         return view('word.index', $param);
     }
 
