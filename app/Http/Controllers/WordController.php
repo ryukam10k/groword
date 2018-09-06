@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Word;
+use App\Tag;
 use DB;
 
 class WordController extends Controller
@@ -69,7 +70,8 @@ class WordController extends Controller
     public function edit(Request $request)
     {
         $word = Word::find($request->id);
-        return view('word.edit', ['form' => $word]);
+        $tags = Tag::all();
+        return view('word.edit', ['form' => $word])->with(['tags' => $tags]);
     }
 
     public function update(Request $request)
@@ -78,6 +80,15 @@ class WordController extends Controller
         $word = Word::find($request->id);
         $form = $request->all();
         unset($form['_token']);
+
+        $tagmaps = [
+            'word_id' => $request->id,
+            'tag_id' => $request->tags,
+        ];
+        DB::table('tagmaps')->where('word_id', $request->id)->delete();
+        DB::table('tagmaps')->insert($tagmaps);
+        unset($form['tags']);
+        
         $word->fill($form)->save();
         return redirect('/word');
     }
