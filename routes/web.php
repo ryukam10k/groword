@@ -25,6 +25,8 @@ Route::post('word/del', 'WordController@remove');
 
 /* Tag */
 Route::get('tag', 'TagController@index');
+Route::get('tag/add', 'TagController@add');
+ROute::post('tag/add', 'TagController@create');
 
 /* Auth */
 Auth::routes();

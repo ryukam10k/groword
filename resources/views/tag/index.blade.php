@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">Tags</div>
                 <div class="card-body">
+                    <a href="/tag/add">Add Tag</a>
                     <table class="table">
                         <tr>
                             <th></th>
