@@ -48,7 +48,8 @@ class WordController extends Controller
 
     public function add(Request $request)
     {
-        return view('word.add');
+        $tags = Tag::all();
+        return view('word.add', ['tags' => $tags]);
     }
 
     public function create(Request $request)
@@ -57,7 +58,16 @@ class WordController extends Controller
         $word = new Word;
         $form = $request->all();
         unset($form['_token']);
+        unset($form['tags']);
         $word->fill($form)->save();
+
+        $tagmaps = [
+            'word_id' => $word->id,
+            'tag_id' => $request->tags,
+        ];
+        DB::table('tagmaps')->where('word_id', $request->id)->delete();
+        DB::table('tagmaps')->insert($tagmaps);
+        
         return redirect('/word');
     }
 

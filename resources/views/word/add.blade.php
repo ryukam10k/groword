@@ -36,6 +36,16 @@
                             <td><input type="text" class="form-control" name="source" value="{{old('source')}}"></td>
                         </tr>
                         <tr>
+                            <th>tags: </th>
+                            <td>
+                                <select name="tags" id="tags" class="form-control">
+                                    @foreach($tags as $tag)
+                                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                    @endforeach
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
                             <th></th>
                             <td><input type="submit" class="btn btn-primary" value="send"></td>
                         </tr>
