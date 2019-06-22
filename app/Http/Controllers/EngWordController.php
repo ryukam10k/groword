@@ -50,4 +50,38 @@ class EngWordController extends Controller
         $eng_word->fill($form)->save();      
         return redirect('/eng_word');
     }
+
+    public function show(Request $request)
+    {
+        $eng_word = EngWord::find($request->id);
+        return view('eng_word.show', ['form' => $eng_word]);
+    }
+
+    public function edit(Request $request)
+    {
+        $eng_word = EngWord::find($request->id);
+        return view('eng_word.edit', ['form' => $eng_word]);
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, EngWord::$rules);
+        $eng_word = EngWord::find($request->id);
+        $form = $request->all();
+        unset($form['_token']);
+        $eng_word->fill($form)->save();
+        return redirect('/eng_word');
+    }
+
+    public function delete(Request $request)
+    {
+        $eng_word = EngWord::find($request->id);
+        return view('eng_word.del', ['form' => $eng_word]);
+    }
+
+    public function remove(Request $request)
+    {
+        EngWord::find($request->id)->delete();
+        return redirect('/eng_word');
+    }
 }

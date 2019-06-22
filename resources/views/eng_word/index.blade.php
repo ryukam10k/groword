@@ -33,9 +33,9 @@
                             <td>{{$item->meaning}}</td>
                             <td>{{$item->updated_at}}</td>
                             <td>
-                                <a href="/word/show?id={{$item->id}}">show</a> | 
-                                <a href="/word/edit?id={{$item->id}}">edit</a> | 
-                                <a href="/word/del?id={{$item->id}}">del</a>
+                                <a href="/eng_word/show?id={{$item->id}}">show</a> | 
+                                <a href="/eng_word/edit?id={{$item->id}}">edit</a> | 
+                                <a href="/eng_word/del?id={{$item->id}}">del</a>
                             </td>
                         </tr>
                         @endforeach

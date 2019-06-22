@@ -38,3 +38,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('eng_word', 'EngWordController@index');
 Route::get('eng_word/add', 'EngWordController@add');
 Route::post('eng_word/add', 'EngWordController@create');
+Route::get('eng_word/show', 'EngWordController@show');
+Route::get('eng_word/edit', 'EngWordController@edit');
+Route::post('eng_word/edit', 'EngWordController@update');
+Route::get('eng_word/del', 'EngWordController@delete');
+Route::post('eng_word/del', 'EngWordController@remove');
