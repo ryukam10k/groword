@@ -36,3 +36,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /* Eng_Word */
 Route::get('eng_word', 'EngWordController@index');
+Route::get('eng_word/add', 'EngWordController@add');
+Route::post('eng_word/add', 'EngWordController@create');

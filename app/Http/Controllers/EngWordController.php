@@ -35,4 +35,19 @@ class EngWordController extends Controller
         $param = ['items' => $items, 'sort' => $sort, 'order' => $order];
         return view('eng_word.index', $param);
     }
+
+    public function add(Request $request)
+    {
+        return view('eng_word.add');
+    }
+
+    public function create(Request $request)
+    {
+        $this->validate($request, EngWord::$rules);
+        $eng_word = new EngWord;
+        $form = $request->all();
+        unset($form['_token']);
+        $eng_word->fill($form)->save();      
+        return redirect('/eng_word');
+    }
 }
