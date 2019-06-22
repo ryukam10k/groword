@@ -14,16 +14,16 @@
                     <table class="table">
                         <tr>
                             <th style="width:20%;">Name
-                                <a href="/word?sort=name&order=asc">△</a>
-                                <a href="/word?sort=name&order=desc">▽</a>
+                                <a href="/eng_word?sort=name&order=asc">△</a>
+                                <a href="/eng_word?sort=name&order=desc">▽</a>
                             </th>
                             <th>Meaning
-                                <a href="/word?sort=meaning&order=asc">△</a>
-                                <a href="/word?sort=meaning&order=desc">▽</a>
+                                <a href="/eng_word?sort=meaning&order=asc">△</a>
+                                <a href="/eng_word?sort=meaning&order=desc">▽</a>
                             </th>
                             <th style="width:15%;">UpdateAt
-                                <a href="/word?sort=updated_at&order=asc">△</a>
-                                <a href="/word?sort=updated_at&order=desc">▽</a>
+                                <a href="/eng_word?sort=updated_at&order=asc">△</a>
+                                <a href="/eng_word?sort=updated_at&order=desc">▽</a>
                             </th>
                             <th style="width:20%;"></th>
                         </tr>
