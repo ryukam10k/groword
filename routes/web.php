@@ -33,3 +33,6 @@ Auth::routes();
 
 /* Home */
 Route::get('/home', 'HomeController@index')->name('home');
+
+/* Eng_Word */
+Route::get('eng_word', 'EngWordController@index');

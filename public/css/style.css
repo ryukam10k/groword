@@ -1,0 +1,12 @@
+.content__header {
+    display: flex;
+}
+
+.content__header__title {
+    flex: 1 1 50%;
+}
+
+.content__header__button {
+    flex: 1 1 50%;
+    text-align: right;
+}

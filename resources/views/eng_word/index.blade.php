@@ -6,8 +6,8 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header content__header">
-                    <div class="content__header__title">Words</div>
-                    <div class="content__header__button"><a href="/word/add" class="btn btn-dark btn-sm" role="button"><i class="fas fa-pen"></i> Add</a></div>
+                    <div class="content__header__title">English Words</div>
+                    <div class="content__header__button"><a href="/eng_word/add" class="btn btn-dark btn-sm" role="button"><i class="fas fa-pen"></i> Add</a></div>
                 </div>
                 <div class="card-body">
                     {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
@@ -21,8 +21,6 @@
                                 <a href="/word?sort=meaning&order=asc">△</a>
                                 <a href="/word?sort=meaning&order=desc">▽</a>
                             </th>
-                            <th style="width:15%;">Tag
-                            </th>
                             <th style="width:15%;">UpdateAt
                                 <a href="/word?sort=updated_at&order=asc">△</a>
                                 <a href="/word?sort=updated_at&order=desc">▽</a>
@@ -33,7 +31,6 @@
                         <tr>
                             <td>{{$item->name}}</td>
                             <td>{{$item->meaning}}</td>
-                            <td>{{$item->tags}}</td>
                             <td>{{$item->updated_at}}</td>
                             <td>
                                 <a href="/word/show?id={{$item->id}}">show</a> | 
