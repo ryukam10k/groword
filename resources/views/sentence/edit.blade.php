@@ -38,6 +38,18 @@
                     </form>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="content__header__title">Related words</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>assure：確信させる。保証する。分からせて安心させる。</li>
+                        <li>turn：曲がる。向きを変える。</li>
+                        <li>fine：<a href="/eng_word/add" target="_blank">Add</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
