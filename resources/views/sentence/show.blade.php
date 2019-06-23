@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="card">
-                <div class="card-header">English Sentenses - Show</div>
+                <div class="card-header content__header">
+                    <div class="content__header__title"><a href="/sentence/">English Sentence</a> - Show</div>
+                    <div class="content__header__button">
+                        <a href="/sentence/edit?id={{$form->id}}" class="btn btn-dark btn-sm" role="button"><i class="fas fa-pen"></i> Edit</a>
+                        <a href="/sentence/del?id={{$form->id}}" class="btn btn-dark btn-sm" role="button"><i class="fas fa-trash"></i> Del</a>
+                    </div>
+                </div>
                 <div class="card-body">
                     <table class="table">
                         <tr>

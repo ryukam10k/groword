@@ -5,8 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">English Sentences - Delete</div>
-
+                <div class="card-header">
+                    <div class="content__header__title"><a href="/sentence/">English Sentence</a> - Delete</div>
+                </div>
                 <div class="card-body">
                     <p>Are you sure you want to delete it?</p>
                     <form action="/sentence/del" method="post">

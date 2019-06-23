@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="card">
-                <div class="card-header">English Sentences - Edit</div>
+                <div class="card-header">
+                    <div class="content__header__title"><a href="/sentence/">English Sentence</a> - Edit</div>
+                </div>
                 <div class="card-body">
                     @if (count($errors) > 0)
                     <div>

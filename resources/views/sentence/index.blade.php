@@ -25,18 +25,12 @@
                                 <a href="/sentence?sort=updated_at&order=asc">△</a>
                                 <a href="/sentence?sort=updated_at&order=desc">▽</a>
                             </th>
-                            <th style="width:20%;"></th>
                         </tr>
                         @foreach ($items as $item)
                         <tr>
-                            <td>{{$item->name}}</td>
+                            <td><a href="/sentence/show?id={{$item->id}}">{{$item->name}}</a></td>
                             <td>{{$item->meaning}}</td>
                             <td>{{$item->updated_at}}</td>
-                            <td>
-                                <a href="/sentence/show?id={{$item->id}}">show</a> | 
-                                <a href="/sentence/edit?id={{$item->id}}">edit</a> | 
-                                <a href="/sentence/del?id={{$item->id}}">del</a>
-                            </td>
                         </tr>
                         @endforeach
                     </table>
