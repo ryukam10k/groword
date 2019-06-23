@@ -21,12 +21,12 @@
                     <input type="hidden" name="id" value="{{$form->id}}">
                     <table class="table">
                         <tr>
-                            <th>name: </th>
-                            <td><input type="text" class="form-control" name="name" value="{{$form->name}}"></td>
+                            <th>sentence: </th>
+                            <td><textarea class="form-control" rows="4" name="name">{{$form->name}}</textarea></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
-                            <td><textarea class="form-control" rows="7" name="meaning">{{$form->meaning}}</textarea></td>
+                            <td><textarea class="form-control" rows="4" name="meaning">{{$form->meaning}}</textarea></td>
                         </tr>
                         <tr>
                             <th></th>

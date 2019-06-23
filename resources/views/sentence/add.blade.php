@@ -20,12 +20,12 @@
                     <table class="table">
                         {{ csrf_field() }}
                         <tr>
-                            <th>name: </th>
-                            <td><input type="text" class="form-control" name="name" value="{{old('name')}}"></td>
+                            <th>sentence: </th>
+                            <td><textarea class="form-control" rows="4" name="name">{{old('name')}}</textarea></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
-                            <td><textarea class="form-control" rows="7" name="meaning">{{old('meaning')}}</textarea></td>
+                            <td><textarea class="form-control" rows="4" name="meaning">{{old('meaning')}}</textarea></td>
                         </tr>
                         <tr>
                             <th></th>

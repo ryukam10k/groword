@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <table class="table">
                         <tr>
-                            <th>name: </th>
+                            <th>sentence: </th>
                             <td>{{$form->name}}</td>
                         </tr>
                         <tr>

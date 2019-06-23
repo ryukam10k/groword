@@ -13,7 +13,7 @@
                     {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
                     <table class="table">
                         <tr>
-                            <th style="width:20%;">Name
+                            <th>Sentence
                                 <a href="/sentence?sort=name&order=asc">△</a>
                                 <a href="/sentence?sort=name&order=desc">▽</a>
                             </th>
