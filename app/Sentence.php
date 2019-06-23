@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sentense extends Model
+class Sentence extends Model
 {
     protected $guarded = array('id');
 

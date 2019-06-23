@@ -43,3 +43,13 @@ Route::get('eng_word/edit', 'EngWordController@edit');
 Route::post('eng_word/edit', 'EngWordController@update');
 Route::get('eng_word/del', 'EngWordController@delete');
 Route::post('eng_word/del', 'EngWordController@remove');
+
+/* Sentense */
+Route::get('sentence', 'SentenceController@index');
+Route::get('sentence/add', 'SentenceController@add');
+Route::post('sentence/add', 'SentenceController@create');
+Route::get('sentence/show', 'SentenceController@show');
+Route::get('sentence/edit', 'SentenceController@edit');
+Route::post('sentence/edit', 'SentenceController@update');
+Route::get('sentence/del', 'SentenceController@delete');
+Route::post('sentence/del', 'SentenceController@remove');

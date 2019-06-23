@@ -38,7 +38,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/eng_word">English</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/eng_word">English Words</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/sentence">English Sentences</a></li>
                         <li class="nav-item" style="display:flex; alignItems:center; margin-left:15px;">
                         <form action="/word" method="get" class="form-inline md-form form-sm">
                             <input name="keyword" class="form-control form-control-sm mr-3" type="text" placeholder="Search" aria-label="Search">
