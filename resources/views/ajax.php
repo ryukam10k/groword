@@ -9,14 +9,15 @@
     <h1>API CALL TEST with Vue.JS</h1>
     <div id="app">
         <div>
-            <p>URL</p>
+            <h2>URL</h2>
             <input type="text" id="url" v-model="url" size="60">
         </div>
         <div>
-            <textarea v-on:change="get" name="" id="sentence" v-model="sentence" cols="30" rows="10"></textarea>
+            <h2>英文</h2>
+            <textarea v-on:change="getWords" name="" id="sentence" v-model="sentence" cols="30" rows="10"></textarea>
         </div>
         <div>
-            <p>関連する単語</p>
+            <h2>関連する単語</h2>
             <li v-for="word in words">
                 {{ word.name + " " + word.meaning }}
             </li>

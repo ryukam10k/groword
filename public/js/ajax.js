@@ -1,4 +1,4 @@
-//Vueのインスタンスの定義
+
 var app = new Vue({
     el: "#app",
     data: {
@@ -6,10 +6,9 @@ var app = new Vue({
         sentence: "",
         words: {}
     },
-    methods: {//v-on:click="hoge"などのイベントに紐づく関数定義
-        get: function () { //v-on:click="post"時の処理
-            //Axiosを使ったAJAX
-            //リクエスト時のオプションの定義
+    methods: {
+        getWords: function () {
+            // Ajax by Axios
             config = {
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest',
@@ -18,10 +17,6 @@ var app = new Vue({
                 withCredentials: true,
             }
 
-            //window.alert(this.sentence);
-
-            //vueでバインドされた値はmethodの中ではthisで取得できる
-            //param = JSON.parse(this.param)
             param = "";
 
             axios.get(this.url + this.sentence, param, config)
