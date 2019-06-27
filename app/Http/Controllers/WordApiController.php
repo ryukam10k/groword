@@ -51,9 +51,10 @@ class WordApiController extends Controller
         return $word->toArray();
     }
 
-    public function mean($name)
+    public function getwords($sentence)
     {
-        $word = EngWord::where('eng_words.name', '=', "$name")->get();
+        $keywords = explode(' ', $sentence);
+        $word = EngWord::whereIn('name', $keywords)->get();
         return $word;
     }
 

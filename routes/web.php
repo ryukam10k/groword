@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'WordController@index');
+Route::get('/ajax', function() {
+    return view("ajax");
+});
 
 /* Word */
 Route::get('word', 'WordController@index');
@@ -56,4 +59,4 @@ Route::post('sentence/del', 'SentenceController@remove');
 
 /* WordApi */
 Route::resource('wordapi', 'WordApiController');
-Route::get('wordapi/mean/{name}', 'WordApiController@mean');
+Route::get('wordapi/getwords/{sentence}', 'WordApiController@getwords');
