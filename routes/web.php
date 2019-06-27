@@ -53,3 +53,7 @@ Route::get('sentence/edit', 'SentenceController@edit');
 Route::post('sentence/edit', 'SentenceController@update');
 Route::get('sentence/del', 'SentenceController@delete');
 Route::post('sentence/del', 'SentenceController@remove');
+
+/* WordApi */
+Route::resource('wordapi', 'WordApiController');
+Route::get('wordapi/mean/{name}', 'WordApiController@mean');
