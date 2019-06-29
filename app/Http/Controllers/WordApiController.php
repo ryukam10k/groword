@@ -51,11 +51,31 @@ class WordApiController extends Controller
         return $word->toArray();
     }
 
+    public function getwords2($sentence)
+    {
+        $keywords = explode(' ', $sentence);
+        $words = EngWord::whereIn('name', $keywords)->get();
+        return $words;
+    }
+
     public function getwords($sentence)
     {
         $keywords = explode(' ', $sentence);
-        $word = EngWord::whereIn('name', $keywords)->get();
-        return $word;
+        $words = array();
+        //dd($keywords);
+        foreach ($keywords as $keyword) {
+            $word = EngWord::where('name', $keyword)->first();
+            //dump($word);
+            if (is_null($word)) {
+                //dd($keyword);
+                $word = new EngWord();
+                $word->name = $keyword;
+                $word->meaning = "unknown";
+            }
+            array_push($words, $word);
+        }
+        //dd($words);
+        return $words;
     }
 
     /**
