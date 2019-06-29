@@ -23,7 +23,7 @@
                         {{ csrf_field() }}
                         <tr>
                             <th>sentence: </th>
-                            <td><textarea class="form-control" rows="4" name="name">{{old('name')}}</textarea></td>
+                            <td><textarea v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{old('name')}}</textarea></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
@@ -36,8 +36,22 @@
                     </table>
                     </form>
                 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="content__header__title">Related words</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li v-for="word in words">
+                                @{{ word.name + "   " + word.meaning }}
+                                <a v-if="word.meaning === 'unknown'" href="/eng_word/add" target="_blank">:Add</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

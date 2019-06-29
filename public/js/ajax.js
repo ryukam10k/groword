@@ -1,12 +1,17 @@
 
-var app = new Vue({
-    el: "#app",
+var vue_app = new Vue({
+    el: "#vue_app",
     data: {
         url: "http://192.168.10.10/wordapi/getwords/",
-        sentence: "",
-        words: {}
+        sentence: document.getElementById('sentence').value,
+        words: []
     },
     methods: {
+        window: onload = function () {
+            //this.window.alert();
+            this.getWords();
+            this.window.alert('test2');
+        },
         getWords: function () {
             // Ajax by Axios
             config = {
@@ -21,11 +26,11 @@ var app = new Vue({
 
             axios.get(this.url + this.sentence, param, config)
                 .then(function (res) {
-                    app.words = res.data
+                    vue_app.words = res.data
                     console.log(res)
                 })
                 .catch(function (res) {
-                    app.words = res.data
+                    vue_app.words = res.data
                     console.log(res)
                 });
         }

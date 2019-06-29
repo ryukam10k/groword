@@ -24,7 +24,7 @@
                     <table class="table">
                         <tr>
                             <th>sentence: </th>
-                            <td><textarea class="form-control" rows="4" name="name">{{$form->name}}</textarea></td>
+                            <td><textarea v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{$form->name}}</textarea></td>
                         </tr>
                         <tr>
                             <th>meaning: </th>
@@ -44,9 +44,10 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li>assure：確信させる。保証する。分からせて安心させる。</li>
-                        <li>turn：曲がる。向きを変える。</li>
-                        <li>fine：<a href="/eng_word/add" target="_blank">Add</a></li>
+                        <li v-for="word in words">
+                            @{{ word.name + "   " + word.meaning }}
+                            <a v-if="word.meaning === 'unknown'" href="/eng_word/add" target="_blank">:Add</a>
+                        </li>
                     </ul>
                 </div>
             </div>

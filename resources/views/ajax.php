@@ -7,7 +7,7 @@
 
 <body>
     <h1>API CALL TEST with Vue.JS</h1>
-    <div id="app">
+    <div id="vue_app">
         <div>
             <h2>URL</h2>
             <input type="text" id="url" v-model="url" size="60">
