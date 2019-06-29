@@ -5,8 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header content__header">
                     <div class="content__header__title"><a href="/sentence/">English Sentence</a> - Edit</div>
+                    <div class="content__header__button">
+                        <a href="/sentence/del?id={{$form->id}}" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
+                    </div>
                 </div>
                 <div class="card-body">
                     @if (count($errors) > 0)
@@ -34,6 +37,7 @@
                             <input type="submit" class="btn btn-primary btn-block" value="Save">
                         </div>
                     </form>
+                    <example-component></example-component>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
                         </tr>
                         @foreach ($items as $item)
                         <tr>
-                            <td><a href="/sentence/show?id={{$item->id}}">{{$item->name}}</a></td>
+                            <td><a href="/sentence/edit?id={{$item->id}}">{{$item->name}}</a></td>
                             <td>{{$item->meaning}}</td>
                             <td>{{$item->updated_at}}</td>
                         </tr>
