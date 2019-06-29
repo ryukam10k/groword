@@ -60,22 +60,26 @@ class WordApiController extends Controller
 
     public function getwords($sentence)
     {
-        $keywords = explode(' ', $sentence);
+        $keywords = explode(' ', $this->replaceSymbol($sentence));
         $words = array();
-        //dd($keywords);
+
         foreach ($keywords as $keyword) {
             $word = EngWord::where('name', $keyword)->first();
-            //dump($word);
             if (is_null($word)) {
-                //dd($keyword);
                 $word = new EngWord();
                 $word->name = $keyword;
                 $word->meaning = "unknown";
             }
             array_push($words, $word);
         }
-        //dd($words);
+ 
         return $words;
+    }
+
+    private function replaceSymbol($sentence) {
+        $sentence = str_replace('.', '', $sentence);
+        $sentence = str_replace(',', '', $sentence);
+        return $sentence;
     }
 
     /**
