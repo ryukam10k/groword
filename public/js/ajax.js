@@ -6,6 +6,9 @@ var vue_app = new Vue({
         sentence: document.getElementById('sentence').value,
         words: []
     },
+    mounted: function () {
+        this.getWords()
+    },
     methods: {
         window: onload = function () {
             //this.window.alert();
