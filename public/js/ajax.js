@@ -2,7 +2,7 @@
 var vue_app = new Vue({
     el: "#vue_app",
     data: {
-        url: "http://192.168.10.10/wordapi/getwords/",
+        url: "/wordapi/getwords/",
         sentence: document.getElementById('sentence').value,
         words: []
     },
