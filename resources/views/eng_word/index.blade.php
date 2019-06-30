@@ -21,7 +21,7 @@
                                 <a href="/eng_word?sort=meaning&order=asc">△</a>
                                 <a href="/eng_word?sort=meaning&order=desc">▽</a>
                             </th>
-                            <th style="width:15%;">UpdateAt
+                            <th>UpdateAt
                                 <a href="/eng_word?sort=updated_at&order=asc">△</a>
                                 <a href="/eng_word?sort=updated_at&order=desc">▽</a>
                             </th>

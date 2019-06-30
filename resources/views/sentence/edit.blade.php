@@ -37,7 +37,6 @@
                             <input type="submit" class="btn btn-primary btn-block" value="Save">
                         </div>
                     </form>
-                    <example-component></example-component>
                 </div>
             </div>
         </div>

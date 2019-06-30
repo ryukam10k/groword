@@ -12,3 +12,16 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.content__header {
+  display: flex;
+
+  &__title {
+    flex: 1 1 50%;
+  }
+  
+  &__button {
+    flex: 1 1 50%;
+    text-align: right;
+  }
+}
