@@ -14193,8 +14193,46 @@ window.Vue = __webpack_require__(35);
 
 Vue.component('example-component', __webpack_require__(39));
 
+// const app = new Vue({
+//     el: '#app'
+// });
+
+
 var app = new Vue({
-  el: '#app'
+    el: "#app",
+    data: {
+        url: "/wordapi/getwords/",
+        sentence: document.getElementById('sentence').value,
+        words: []
+    },
+    mounted: function mounted() {
+        this.getWords();
+    },
+    methods: {
+        window: onload = function onload() {
+            this.getWords();
+        },
+        getWords: function getWords() {
+            // Ajax by Axios
+            config = {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application / x-www-form-urlencoded'
+                },
+                withCredentials: true
+            };
+
+            param = "";
+
+            axios.get(this.url + this.sentence, param, config).then(function (res) {
+                app.words = res.data;
+                console.log(res);
+            }).catch(function (res) {
+                app.words = res.data;
+                console.log(res);
+            });
+        }
+    }
 });
 
 /***/ }),
