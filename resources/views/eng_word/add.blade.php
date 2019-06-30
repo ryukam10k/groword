@@ -17,21 +17,19 @@
                     </div>
                     @endif
                     <form action="/eng_word/add" method="post">
-                    <table class="table">
                         {{ csrf_field() }}
-                        <tr>
-                            <th>name: </th>
-                            <td><input type="text" class="form-control" name="name" value="{{old('name')}}"></td>
-                        </tr>
-                        <tr>
-                            <th>meaning: </th>
-                            <td><textarea class="form-control" rows="7" name="meaning">{{old('meaning')}}</textarea></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td><input type="submit" class="btn btn-primary" value="send"></td>
-                        </tr>
-                    </table>
+                        <div>Word</div>
+                        <div>
+                            <input type="text" class="form-control" name="name" value="{{old('name')}}">
+                        </div>
+                        <div>Meaning</div>
+                        <div>
+                            <textarea class="form-control" rows="7" name="meaning">{{old('meaning')}}</textarea>
+                        </div>
+                        <hr>
+                        <div>
+                            <input type="submit" class="btn btn-primary btn-block" value="Save">
+                        </div>
                     </form>
                 </div>
             </div>

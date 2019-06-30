@@ -13,7 +13,7 @@
                     {{ $items->appends(['sort' => $sort, 'order' => $order])->links() }}
                     <table class="table">
                         <tr>
-                            <th style="width:20%;">Name
+                            <th>Word
                                 <a href="/eng_word?sort=name&order=asc">△</a>
                                 <a href="/eng_word?sort=name&order=desc">▽</a>
                             </th>
@@ -25,18 +25,12 @@
                                 <a href="/eng_word?sort=updated_at&order=asc">△</a>
                                 <a href="/eng_word?sort=updated_at&order=desc">▽</a>
                             </th>
-                            <th style="width:20%;"></th>
                         </tr>
                         @foreach ($items as $item)
                         <tr>
-                            <td>{{$item->name}}</td>
+                            <td><a href="/eng_word/edit?id={{$item->id}}">{{$item->name}}</a></td>
                             <td>{{$item->meaning}}</td>
                             <td>{{$item->updated_at}}</td>
-                            <td>
-                                <a href="/eng_word/show?id={{$item->id}}">show</a> | 
-                                <a href="/eng_word/edit?id={{$item->id}}">edit</a> | 
-                                <a href="/eng_word/del?id={{$item->id}}">del</a>
-                            </td>
                         </tr>
                         @endforeach
                     </table>
