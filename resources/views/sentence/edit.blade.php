@@ -26,7 +26,7 @@
                         <input type="hidden" name="id" value="{{$form->id}}">
                         <div>Sentence</div>
                         <div>
-                            <textarea v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{$form->name}}</textarea>
+                            <textarea @keypress.space="getWords" v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{$form->name}}</textarea>
                         </div>
                         <div>Meaning</div>
                         <div>

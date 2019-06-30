@@ -22,7 +22,7 @@
                         {{ csrf_field() }}
                         <div>Sentence</div>
                         <div>
-                            <textarea v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{old('name')}}</textarea>
+                            <textarea @keypress.space="getWords" v-on:change="getWords" id="sentence" v-model="sentence" class="form-control" rows="4" name="name">{{old('name')}}</textarea>
                         </div>
                         <div>Meaning</div>
                         <div>
